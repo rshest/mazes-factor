@@ -1,4 +1,4 @@
-USING: tools.test mazes 
+USING: tools.test mazes mazes.private 
 kernel math literals nested-comments ;
 IN: mazes.tests
 
@@ -8,10 +8,10 @@ CONSTANT: LEFT       { -1  0 }
 CONSTANT: RIGHT      {  1  0 }
 
 [ "+ +-+-+ +-+ + +-+ + + " ]
-[ "+  +--+--+  +--+  +  +--+  +  +" 2to1 ] unit-test
+[ "+  +--+--+  +--+  +  +--+  +  +" 2>1 ] unit-test
 
 [ "+  +--+--+  +--+  +  +--+  +  +  " ]
-[ "+ +-+-+ +-+ + +-+ + + " 1to2 ] unit-test
+[ "+ +-+-+ +-+ + +-+ + + " 1>2 ] unit-test
 
 [ $ M1 ]
 [ { "+.+"
